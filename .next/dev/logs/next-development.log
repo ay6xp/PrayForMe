@@ -1,8 +1,1 @@
-[00:00:01.483] Server  LOG     ✓ Ready in 1130ms
-[00:09:32.689] Browser ERROR   uncaughtError: TypeError: prayerTimes.map is not a function
-[00:09:44.804] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:09:45.119] Server  LOG     ✓ Compiled in 102.8s
-[00:11:22.704] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? class className
-[00:14:03.163] Server  LOG     ✓ Compiled in 257.8s
-[00:20:50.154] Server  LOG     ✓ Compiled in 395.7s
-[00:38:22.632] Server  LOG     ✓ Compiled in 351.8s
+[00:00:01.508] Server  LOG     ✓ Ready in 1191ms
