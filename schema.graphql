@@ -1,0 +1,13 @@
+   type PrayerTimes {
+        fajr: String!
+        dhuhr: String!
+        asr: String!
+        maghrib: String!
+        isha: String!
+        sunrise: String!
+    }
+
+    type Query {
+        sendSalams: String!
+        getPrayerTimes(lat: Float!, lon: Float!, method: Int, school: Int, date: String): PrayerTimes!
+     }

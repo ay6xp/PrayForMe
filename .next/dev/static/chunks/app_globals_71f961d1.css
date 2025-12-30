@@ -1,0 +1,133 @@
+/* [project]/app/globals.css [app-client] (css) */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+}
+
+.background img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.overlay {
+  background: #043a29a6;
+  position: absolute;
+  inset: 0;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.header p {
+  color: #fde68a;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.location {
+  justify-content: center;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.location select {
+  border: none;
+  border-radius: 8px;
+  padding: .5rem .75rem;
+  font-size: .95rem;
+}
+
+.grid-wrapper {
+  padding: 2rem 1.5rem 4rem;
+}
+
+.prayer-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .prayer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .prayer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.prayer-card {
+  text-align: center;
+  background: #ffffffeb;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 30px #00000026;
+}
+
+.prayer-card .icon {
+  margin-bottom: .75rem;
+  font-size: 1.75rem;
+}
+
+.prayer-card .label {
+  letter-spacing: .15em;
+  color: #064e3b;
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.prayer-card .time {
+  color: #c2410c;
+  margin-top: .75rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.footer {
+  justify-content: center;
+  padding-bottom: 2.5rem;
+  display: flex;
+}
+
+.footer-pill {
+  color: #fde68a;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: #ffffff2e;
+  border: 1px solid #ffffff40;
+  border-radius: 999px;
+  padding: .75rem 1.5rem;
+}
+
+/*# sourceMappingURL=app_globals_71f961d1.css.map*/

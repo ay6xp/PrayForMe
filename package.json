@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "graphql": "^16.12.0",
+    "graphql-yoga": "^5.18.0",
+    "next": "^16.1.1",
+    "radix-ui": "^1.4.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-relay": "^20.1.1",
+    "relay-runtime": "^20.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "25.0.3",
+    "@types/react": "19.2.7",
+    "babel-plugin-relay": "^20.1.1",
+    "get-graphql-schema": "^2.1.2",
+    "relay-compiler": "^20.1.1",
+    "typescript": "5.9.3"
+  },
+  "relay": {
+    "src": "./",
+    "schema": "./schema.graphql",
+    "language": "typescript",
+    "artifactDirectory": "./__generated__"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "relay": "relay-compiler"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-relay"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/dev/Ruby/app/relay/RelayEnvironment.ts"],"sourcesContent":["'use client';\r\n\r\nimport {\r\n    Environment,\r\n    Network,\r\n    RecordSource,\r\n    Store,\r\n    FetchFunction,\r\n} from 'relay-runtime';\r\n\r\nconst fetchQuery: FetchFunction = async (operation, variables) => {\r\n    const response = await fetch('/api/graphql', {\r\n        method: 'POST',\r\n        headers: {\r\n            'Content-Type': 'application/json',\r\n        },\r\n        body: JSON.stringify({\r\n            query: operation.text,\r\n            variables,\r\n        }),\r\n    });\r\n    return response.json();\r\n};\r\n\r\nexport const environment = new Environment({\r\n    network: Network.create(fetchQuery),\r\n    store: new Store(new RecordSource()),\r\n});"],"names":[],"mappings":";;;;AAEA;AAFA;;AAUA,MAAM,aAA4B,OAAO,WAAW;IAChD,MAAM,WAAW,MAAM,MAAM,gBAAgB;QACzC,QAAQ;QACR,SAAS;YACL,gBAAgB;QACpB;QACA,MAAM,KAAK,SAAS,CAAC;YACjB,OAAO,UAAU,IAAI;YACrB;QACJ;IACJ;IACA,OAAO,SAAS,IAAI;AACxB;AAEO,MAAM,cAAc,IAAI,wJAAW,CAAC;IACvC,SAAS,oJAAO,CAAC,MAAM,CAAC;IACxB,OAAO,IAAI,kJAAK,CAAC,IAAI,yJAAY;AACrC"}}]
+}
