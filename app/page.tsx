@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { useEffect, useState } from 'react';
 import { graphql, useLazyLoadQuery } from 'react-relay/hooks'
+import TodaySchedule from "./todaysdate";
 
 const HomePageQuery = graphql`query pageQuery($lat: Float!, $lon: Float!, $method: Int, $school: Int, $date: String) {
         getPrayerTimes(lat: $lat, lon: $lon, method: $method, school: $school, date: $date) {
@@ -44,7 +45,6 @@ function to12HourIntl(hhmm: string) {
     hour12: true,
   }).format(d);
 }
-
 
 // BackgroundPortal is implemented in `client/BackgroundPortal.tsx`.
 
@@ -122,7 +122,7 @@ export default function HomePage() {
             {/* Header */}
             <header className="header">
                 <h1>Prayer Times</h1>
-                <p>Today's Schedule – {formattedDate}</p>
+                <TodaySchedule />
             </header>
 
             {/* Grid */}
